@@ -265,6 +265,7 @@ const HomePage = () => {
             <label
               htmlFor="numberDocument"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              placeholder='00000000'
             >
               Número de documento
             </label>
