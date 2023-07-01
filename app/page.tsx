@@ -292,13 +292,11 @@ const HomePage = () => {
               onChange={handleChange}
             >
               <option value="">Seleccione la tienda</option>
-              <option value="">Seleccione una tienda</option>
-              <option value="tienda 1">Tienda 1</option>
-              <option value="tienda 2">Tienda 2</option>
-              <option value="tienda 3">Tienda 3</option>
-              <option value="tienda 4">Tienda 4</option>
-              <option value="tienda 5">Tienda 5</option>
-              <option value="eduardo">Tienda eduardo</option>
+              <option value="tienda 1">Pucallpa</option>
+              <option value="tienda 2">Iquitos</option>
+              <option value="tienda 3">Jaén</option>
+              <option value="tienda 4">Tarapoto</option>
+              <option value="tienda 5">Yurimaguas</option>
             </select>
           </div>
           <div className="mb-6">
