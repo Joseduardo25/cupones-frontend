@@ -10,7 +10,7 @@ const CuponesPage = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://cupones-backend-production.up.railway.app/api/v1/cupon`)
+    fetch(`https://cupones-backend-production.up.railway.app/api/v1/cupon`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data.cupons);
