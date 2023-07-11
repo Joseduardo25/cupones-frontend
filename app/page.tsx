@@ -28,7 +28,7 @@ const HomePage = () => {
   const notifyWarning = () => toast.error("Existe un campo vacío");
   const [isLoading, setIsLoading] = useState(false);
   const [isInvalid, setIsInvalid] = useState(false);
-  const [steps, setSteps] = useState(true);
+  const [steps, setSteps] = useState(false);
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
 
