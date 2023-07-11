@@ -18,7 +18,7 @@ const CuponesPage = () => {
       console.log(`${process.env.NEXT_PUBLIC_DB_URL}cupon`);
 
     // cambiar url para produccion
-      const response = await fetch(`https://cupones-backend-production.up.railway.app/api/v1/cupon`);
+      const response = await fetch(`http://cupones-backend-production.up.railway.app/api/v1/cupon`);
       const data = await response.json();
       return data.cupons;
     } catch (error) {
