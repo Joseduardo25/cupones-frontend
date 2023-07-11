@@ -11,9 +11,9 @@ interface DataI {
 
 export const saveRegisterCoupon = async (data: DataI) => {
   try {
-    // console.log(`http://localhost:5050/api/v1/user`);
     const response = await fetch(
-      `https://cupona-app-server-production.up.railway.app/api/v1/user`,
+      // `https://cupona-app-server-production.up.railway.app/api/v1/user`,
+      `http://localhost:5050/api/v1/user`,
       {
         method: "POST",
         headers: {
@@ -21,7 +21,9 @@ export const saveRegisterCoupon = async (data: DataI) => {
         },
         body: JSON.stringify(data),
       }
-    );
+    )
+    ;
+    console.log(await response, "respuesta");
     const dataResponse = await response.json();
     console.log(dataResponse);
     return dataResponse;
