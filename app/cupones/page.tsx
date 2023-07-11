@@ -29,21 +29,25 @@ const CuponesPage = () => {
   const downloadFile = () => {};
 
   return (
-    <div className="h-screen overflow-y-auto ">
-      <div className="mx-auto container mt-10 flex justify-between">
-        <h1>Cupones</h1>
-        <div className="">
-          <button onClick={() => generateExcelFile(dataCupons)}>
-            descargar cupones
-          </button>
+    <>
+      {dataCupons.length === 0 && (
+      <div className="h-screen overflow-y-auto ">
+        <div className="mx-auto container mt-10 flex justify-between">
+          <h1>Cupones</h1>
+          <div className="">
+            <button onClick={() => generateExcelFile(dataCupons)}>
+              descargar cupones
+            </button>
+          </div>
         </div>
+        <main>
+          <div className="container mx-auto mt-10">
+            <TableList cupones={dataCupons} />
+          </div>
+        </main>
       </div>
-      <main>
-        <div className="container mx-auto mt-10">
-          <TableList cupones={dataCupons} />
-        </div>
-      </main>
-    </div>
+      )}
+    </>
   );
 };
 
