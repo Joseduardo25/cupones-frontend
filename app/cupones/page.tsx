@@ -30,7 +30,7 @@ const CuponesPage = () => {
 
   return (
     <>
-      {dataCupons.length === 0 && (
+      {dataCupons.length && (
       <div className="h-screen overflow-y-auto ">
         <div className="mx-auto container mt-10 flex justify-between">
           <h1>Cupones</h1>
