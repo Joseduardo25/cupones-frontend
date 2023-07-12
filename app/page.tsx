@@ -1,7 +1,7 @@
 "use client"; //
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import logo from "../public/logo.png";
+import logo from "../public/logo2.png";
 import toast, { Toaster } from "react-hot-toast";
 import { saveRegisterCoupon } from "./utils/apis";
 import Loader from "./components/Loader";
@@ -9,7 +9,7 @@ import Modal from "./components/Modal";
 import Confetti from "react-confetti";
 import Link from 'next/link';
 import styles from "./styles/Styles.module.css";
-import tv from "../public/tv.png";
+import LogoCredi from "../public/imageTV.png";
 // import useWindowSize from "react-use/lib/useWindowSize";
 
 interface FormI {
@@ -111,7 +111,9 @@ const HomePage = () => {
     <>
       <div 
       // className="flex items-center justify-center h-screen"
-      className={`md:flex items-center justify-center min-h-screen pb-24 relative ${styles.bgGradient}`}
+      //${styles.bgGradient}
+      className={` w-full md:flex items-center justify-center min-h-screen pb-24 relative snap-none`}
+      style={{"backgroundImage": "url(/backgroundBlueCrediVargas.jpg)", "overflow": "hidden"}}
       >
         <div>
           <Toaster />
@@ -196,20 +198,29 @@ const HomePage = () => {
                 width={250}
                 className=""
               />
-              <span className="text-white text-1xl">Del 10 al 31 de Julio</span>
-              <button className="px-5 pt-2 rounded-full bg-orange-600 text-white font-normal mt-2">
+              <span className="mt-6 text-white text-1xl font-bold">Del 10 al 31 de Julio</span>
+              <button className="mt-6 font-bold px-5 pt-0 rounded-full bg-red-700 text-white leading-8 mt-2  text-justify"
+                style={{"backgroundColor":"#fe0000"}}
+              >
                 !Gana con la Cuponera Credi Vargas!
               </button>
-              <Image
+              {/* <Image
                 src={tv}
                 alt={"Logo de CrediVargas"}
                 height={100}
                 width={350}
                 className=""
+              /> */}
+              <Image
+                src={LogoCredi}
+                alt={"Logo de CrediVargas"}
+                height={250}
+                width={600}
+                className="mt-10"
               />
           </div>
           <form className={`md:p-10 bg-white rounded-2xl md:w-1/2 p-1 shadow-lg`} onSubmit={handleSubmit}>
-            <h1 className="mb-10 text-4xl font-bold text-center">
+            <h1 className="dark:text-gray-900 mb-10 text-4xl font-bold text-center">
               Registra tu cupón
             </h1>
 
@@ -217,14 +228,14 @@ const HomePage = () => {
               <div>
                 <label
                   htmlFor="first_name"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Nombres
                 </label>
                 <input
                   type="text"
                   id="first_name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="John"
                   name="name"
                   // required
@@ -234,14 +245,14 @@ const HomePage = () => {
               <div>
                 <label
                   htmlFor="last_name"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Apellidos
                 </label>
                 <input
                   type="text"
                   id="last_name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Vargas"
                   name="lastName"
                   required
@@ -252,14 +263,14 @@ const HomePage = () => {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Número de Teléfono
                 </label>
                 <input
                   type="tel"
                   id="phone"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="987-654-321"
                   name="phone"
                   required
@@ -269,34 +280,34 @@ const HomePage = () => {
               <div className="">
                 <label
                   htmlFor="typeDocument"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Seleccione el tipo de documento
                 </label>
                 <select
                   id="typeDocument"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   name="typeDocument"
                   onChange={handleChange}
                 >
-                  <option value="">Seleccione el tipo de documento</option>
-                  <option value="DNI">DNI</option>
-                  <option value="C.EXTRANJERIA">C.Extranjeria</option>
-                  <option value="PASAPORTE">Pasaporte</option>
+                  <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="">Seleccione el tipo de documento</option>
+                  <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="DNI">DNI</option>
+                  <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="C.EXTRANJERIA">C.Extranjeria</option>
+                  <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="PASAPORTE">Pasaporte</option>
                 </select>
               </div>
             </div>
             <div className="mb-6">
               <label
                 htmlFor="numberDocument"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Número de documento
               </label>
               <input
                 type="tel"
                 id="numberDocument"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="00000000"
                 name="numberDocument"
                 required
@@ -306,36 +317,37 @@ const HomePage = () => {
             <div className="mb-6">
               <label
                 htmlFor="store"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
               >
                 Selecciona la tienda
               </label>
               <select
                 id="store"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-grey dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 name="store"
                 onChange={handleChange}
+                placeholder='Seleccione la tienda'
               >
-                <option value="">Seleccione la tienda</option>
-                <option value="pucallpa1_tarapaca">Pucallpa l - Tarapaca</option>
-                <option value="pucallpa2_centenario">Pucallpa ll - Centenario</option>
-                <option value="iquitos">Iquitos</option>
-                <option value="jaen">Jaén</option>
-                <option value="tarapoto">Tarapoto</option>
-                <option value="yurimaguas">Yurimaguas</option>
+                <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="">Seleccione la tienda</option>
+                <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="pucallpa1_tarapaca">Pucallpa l - Tarapaca</option>
+                <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="pucallpa2_centenario">Pucallpa ll - Centenario</option>
+                <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="iquitos">Iquitos</option>
+                <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="jaen">Jaén</option>
+                <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="tarapoto">Tarapoto</option>
+                <option className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900" value="yurimaguas">Yurimaguas</option>
               </select>
             </div>
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className=" dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Email address
               </label>
               <input
                 type="email"
                 id="email"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="example@gmail.com"
                 required
                 name="email"
@@ -345,14 +357,14 @@ const HomePage = () => {
             <div className="mb-6">
               <label
                 htmlFor="cuopon"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Cupón
               </label>
               <input
                 type="text"
                 id="cuopon"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 border-sky-500"
+                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 border-sky-500"
                 required
                 name="cuopon"
                 onChange={handleChange}
