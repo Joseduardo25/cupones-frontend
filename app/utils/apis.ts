@@ -13,7 +13,7 @@ export const saveRegisterCoupon = async (data: DataI) => {
   try {
     const response = await fetch(
       // `https://cupona-app-server-production.up.railway.app/api/v1/user`,
-      `http://cupones-backend-production.up.railway.app/api/v1/user`,
+      `https://cupones-backend-production.up.railway.app/api/v1/user`,
       {
         method: "POST",
         headers: {
