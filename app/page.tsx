@@ -93,7 +93,7 @@ const HomePage = () => {
       if (res.message == "User created") {
         setIsLoading(false);
         setSteps(true);
-      }else if (res.message == "No existe el cupón") {
+      }else if (res.message == "No existe el cupón" || res.message == "Cupon no valido") {
         setIsInvalid(true);
         setSteps(false);
       }else{
