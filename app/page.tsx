@@ -112,7 +112,7 @@ const HomePage = () => {
       <div 
       // className="flex items-center justify-center h-screen"
       //${styles.bgGradient}
-      className={` w-full md:flex items-center justify-center min-h-screen pb-24 relative snap-none`}
+      className={`pb-0 w-full md:flex items-center justify-center min-h-screen pb-24 relative snap-none`}
       style={{"backgroundImage": "url(/backgroundBlueCrediVargas.jpg)", "overflow": "hidden"}}
       >
         <div>
