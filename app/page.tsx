@@ -9,7 +9,7 @@ import Modal from "./components/Modal";
 import Confetti from "react-confetti";
 import Link from 'next/link';
 import styles from "./styles/Styles.module.css";
-import LogoCredi from "../public/imageTV.png";
+import LogoCredi from "../public/TELEVISOR-50-SAMSUNG-[UN50AU7090GXPE].png";
 // import useWindowSize from "react-use/lib/useWindowSize";
 
 interface FormI {
@@ -112,9 +112,14 @@ const HomePage = () => {
       <div 
       // className="flex items-center justify-center h-screen"
       //${styles.bgGradient}
-      className={`pb-0 w-full md:flex items-center justify-center min-h-screen pb-24 relative snap-none`}
-      style={{"backgroundImage": "url(/backgroundBlueCrediVargas.jpg)", "overflow": "hidden"}}
+      className={`pb-0 w-full md:flex items-center justify-center min-h-screen pb-24 relative snap-none z-0`}
+      style={{"backgroundImage": "url(/backgroundBlueCrediVargas.jpg)"}}
       >
+        <div
+        className={`pb-0 w-full md:flex items-center justify-center min-h-screen pb-24 relative snap-none z-20`}
+      style={{"backgroundImage": "url(/backgroundDarkConfetti.png)"}}
+
+        >
         <div>
           <Toaster />
         </div>
@@ -387,6 +392,7 @@ const HomePage = () => {
             </div>
           </form>
         </div>
+      </div>
       </div>
     </>
   );
