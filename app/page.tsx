@@ -228,14 +228,14 @@ const HomePage = () => {
               <div>
                 <label
                   htmlFor="first_name"
-                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-gray"
                 >
                   Nombres
                 </label>
                 <input
                   type="text"
                   id="first_name"
-                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="John"
                   name="name"
                   // required
@@ -245,14 +245,14 @@ const HomePage = () => {
               <div>
                 <label
                   htmlFor="last_name"
-                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-black"
                 >
                   Apellidos
                 </label>
                 <input
                   type="text"
                   id="last_name"
-                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Vargas"
                   name="lastName"
                   required
@@ -263,14 +263,14 @@ const HomePage = () => {
               <div>
                 <label
                   htmlFor="phone"
-                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-black"
                 >
                   Número de Teléfono
                 </label>
                 <input
                   type="tel"
                   id="phone"
-                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="987-654-321"
                   name="phone"
                   required
@@ -280,7 +280,7 @@ const HomePage = () => {
               <div className="">
                 <label
                   htmlFor="typeDocument"
-                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-black"
                 >
                   Seleccione el tipo de documento
                 </label>
@@ -300,14 +300,14 @@ const HomePage = () => {
             <div className="mb-6">
               <label
                 htmlFor="numberDocument"
-                className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-black"
               >
                 Número de documento
               </label>
               <input
                 type="tel"
                 id="numberDocument"
-                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="00000000"
                 name="numberDocument"
                 required
@@ -340,14 +340,14 @@ const HomePage = () => {
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className=" dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className=" dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-black"
               >
                 Email address
               </label>
               <input
                 type="email"
                 id="email"
-                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="example@gmail.com"
                 required
                 name="email"
@@ -357,14 +357,14 @@ const HomePage = () => {
             <div className="mb-6">
               <label
                 htmlFor="cuopon"
-                className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="dark:text-gray-900 block mb-2 text-sm font-medium text-gray-900 dark:text-black"
               >
                 Cupón
               </label>
               <input
                 type="text"
                 id="cuopon"
-                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 border-sky-500"
+                className="dark:bg-white bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500 border-sky-500"
                 required
                 name="cuopon"
                 onChange={handleChange}
