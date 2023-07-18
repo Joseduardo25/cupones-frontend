@@ -102,9 +102,15 @@ const HomePage = () => {
     });
   }
   
-  const goBack = () => {
+  const errorGoBack = () => {
     setIsLoading(false);
     setIsInvalid(false);
+  };
+
+  const correctGoBack = () => {
+    setIsLoading(false);
+    // setIsInvalid(false);
+    setSteps(false)
   };
 
   return (
@@ -153,6 +159,17 @@ const HomePage = () => {
                 <h1 className="text-3xl text-blue-700">
                   Felicidades, se registró correctamente el cupón
                 </h1>
+                <Link
+                  href="/"
+                >
+                  <button
+                    type="button"
+                    className="mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    onClick={correctGoBack}
+                    >
+                    Aceptar
+                  </button>    
+                </Link>
               </div>
             </Modal>
           </>
@@ -186,7 +203,7 @@ const HomePage = () => {
                   <button
                     type="button"
                     className="mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    onClick={goBack}
+                    onClick={errorGoBack}
                     >
                     Aceptar
                   </button>    
